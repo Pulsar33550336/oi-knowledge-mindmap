@@ -1,4 +1,5 @@
 #import "knowledge-tree-module.typ": draw-knowledge-tree
+#import "@preview/fontawesome:0.2.0": *
 #import "@preview/typewind:0.1.0" as tw
 #set page(width: auto, height: auto, margin: 80pt, fill: tw.gray-50)
 // Modern color scheme
@@ -649,3 +650,12 @@
     #draw-knowledge-tree(mathematics3)
   ]
 ]
+#v(160pt)
+#let credits = [
+  #set text(fill: tw.gray-400, size: 35pt, font: "Maple Mono Normal NL NF")
+  Version: #datetime.today().display()\
+  Visit #fa-github() /Pulsar33550336/oi-knowledge-mindmap for the source code and the latest version.\
+  Licensed under GPL 3.0.
+]
+
+#place(bottom + right, credits)
